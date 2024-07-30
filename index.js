@@ -8,9 +8,9 @@ const response = require('../nodesndri/response.js')
 app.use(bodyParser.json())
 
 app.get('/', (req, res) => {
-    const sqlMahasiswa = "SELECT * FROM tb_mahasiswa"
+    const sqlMahasiswa = "SELECT * FROM tableDatabaseKamu"
     db.query(sqlMahasiswa,(error, result) => {
-        response(200, result, "Berhasil Dapat semua data Mahasiswa", res)
+        response(200, result, "Berhasil Dapat semua data ", res)
     })
 })
 
